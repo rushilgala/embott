@@ -1,13 +1,19 @@
 from httplib2 import Http
 from json import dumps
+import random
 
 #
 # Hangouts Chat incoming webhook quickstart
 #
 def main():
-    url = 'INSERT WEB URL HERE'
+    url = ''
+    
+    messages = ["Timecards!", "Timecards, boys and girls", "Sapere aude! Timecards", 
+    "Timecards, please", "TWimecards", "Timecards, y'all", "Timecards :D"]
+
     bot_message = {
-        'text' : '<users/all> Timecards!'}
+        'text' : '<users/all> ' + random.choice(messages)
+    }
 
     message_headers = { 'Content-Type': 'application/json; charset=UTF-8'}
 
