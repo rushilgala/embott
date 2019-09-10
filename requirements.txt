@@ -1,4 +1,1 @@
-Collecting httplib2
-  Downloading https://files.pythonhosted.org/packages/60/55/3902b9f33ad9c15abf447ad91b86ef2d0835a1ae78530f1410c115cf8fe3/httplib2-0.13.1-py3-none-any.whl (94kB)
-Installing collected packages: httplib2
-Successfully installed httplib2-0.13.1
+httplib2==0.13.1
