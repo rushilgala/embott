@@ -6,7 +6,7 @@ import random
 # Hangouts Chat incoming webhook quickstart
 #
 def main():
-    url = ''
+    urls = ['']
     
     messages = ["Timecards!", "Timecards, boys and girls", "Sapere aude! Timecards", 
     "Timecards, please", "TWimecards", "Timecards, y'all", "Timecards :D"]
@@ -19,12 +19,13 @@ def main():
 
     http_obj = Http()
 
-    response = http_obj.request(
-        uri=url,
-        method='POST',
-        headers=message_headers,
-        body=dumps(bot_message),
-    )
+    for url in urls:
+        response = http_obj.request(
+            uri=url,
+            method='POST',
+            headers=message_headers,
+            body=dumps(bot_message),
+        )
 
     print(response)
 
